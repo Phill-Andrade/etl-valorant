@@ -7,9 +7,9 @@ ENV PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
 ENV PYSPARK_PYTHON=/usr/bin/python3
 ENV PYSPARK_DRIVER_PYTHON=/usr/local/bin/start-notebook.sh
 
-RUN apt-get update &&\
-    apt-get upgrade &&\
-    usermod -aG sudo jovyan &&\
+RUN apt-get update && \
+    apt-get upgrade && \
+    usermod -aG sudo jovyan && \
     passwd -d jovyan
 
 USER jovyan
@@ -18,7 +18,7 @@ WORKDIR /home/jovyan/repos/Valorant
 
 COPY requirements.txt /home/jovyan/repos/Valorant
 
-RUN pip install --upgrade pip &&\
+RUN pip install --upgrade pip && \
     pip install -r /home/jovyan/repos/Valorant/requirements.txt
 
 CMD pyspark
