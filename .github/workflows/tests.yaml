@@ -1,0 +1,28 @@
+name: Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Copia os arquivos do repo
+        uses: actions/checkout@v3.3.0
+
+      - name: Intalar python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 'versão que esta na maquina'
+
+      - name: instalar poetry
+        run: pip install poetry
+
+      - name: instalar dependencias do projeto
+        run: poetry install
+
+      - name: rodando isort
+        run: poetry run isort . --diff
+
+      - name: rodando flake8
+        run: poetry run flake8
