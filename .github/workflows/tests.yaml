@@ -13,7 +13,7 @@ jobs:
       - name: Intalar python
         uses: actions/setup-python@v4
         with:
-          python-version: 'versão que esta na maquina'
+          python-version: '3.8.10'
 
       - name: instalar poetry
         run: pip install poetry
