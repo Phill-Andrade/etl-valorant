@@ -1,4 +1,5 @@
-from abc import ABC, abstractmethod 
+from abc import ABC, abstractmethod
+
 
 class etl_base(ABC):
 
@@ -13,4 +14,3 @@ class etl_base(ABC):
     @abstractmethod
     def load(self):
         pass
-
