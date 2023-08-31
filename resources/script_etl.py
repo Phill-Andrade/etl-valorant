@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class etl_base(ABC):
+class ETLBase(ABC):
 
     @abstractmethod
     def extract(self):
