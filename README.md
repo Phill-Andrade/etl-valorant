@@ -36,17 +36,17 @@ Valorant/
 Para executar qualquer script `.py`, basta chamar o bash passando o caminho do spark.sh e o nome do script a ser executado
 
 ```sh
-bash workspace/spark.sh job1
+bash workspace/spark.sh 'nome_do_script'
 ```
 
 ## Notebook
-Para abrir o jupyter server execute o seguinte comando:
+Para abrir o jupyter server execute o seguinte comando no terminal:
 
 ```sh
 bash workspace/jupyterlab.sh
 ```
 
-ao terminar de executar, no terminal estará presente o url do host local, segurando o CTRL e clicando no url o jupyter vai abrir no seu navegador.
+ao executar, o url do host local aparecerá no terminal, segurando o CTRL e clicando no url o jupyter abrirá no seu navegador.
 
 ## Estrutura
 
